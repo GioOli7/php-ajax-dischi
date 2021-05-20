@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- vue -->
+		<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+		<!-- style -->
+		<link rel="stylesheet" href="./css/styles.css" />
+		<title>PHP Dischi</title>
+	</head>
+	<body>
+		<div id="app">
+			<header>
+				<div class="container">
+					<div class="logo">
+						<img src="./img/logo.png" alt="logo" />
+					</div>
+				</div>
+			</header>
+
+			<main>
+				<div class="album_list container">
+					<div class="album" v-for="album in albums">
+						<img :src="album.poster" :alt="album.title" />
+
+						<h3>{{ album.title }}</h3>
+						<span>{{ album.author }}</span>
+						<span><strong>{{ album.year }}</strong></span>
+						<span>{{ album.genre }}</span>
+					</div>
+				</div>
+			</main>
+		</div>
+
+		<!-- axios -->
+		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+		<!-- js -->
+		<script src="./js/script.js"></script>
+	</body>
+</html>
