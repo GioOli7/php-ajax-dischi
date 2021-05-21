@@ -5,7 +5,7 @@ const app = new Vue({
     },
     created() {
         console.log(window.location.href);
-        const dataURL = window.location.href + 'database.php';
+        const dataURL = window.location.href + 'data/getAlbum.php';
         axios
             .get(dataURL)
             .then(result => {
