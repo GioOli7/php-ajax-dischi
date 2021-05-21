@@ -21,6 +21,19 @@
             </header>
 
             <main>
+                <div class="select container">
+                    <select
+                        name="selArtist"
+                        id="selArtist"
+                        v-model="select"
+                        @change="selected(select)"
+                    >
+                        <option value="All">All</option>
+                        <option v-for="artist in artists" :value="artist">
+                            {{ artist }}
+                        </option>
+                    </select>
+                </div>
                 <div class="album_list container">
                     <div class="album" v-for="album in albums">
                         <img :src="album.poster" :alt="album.title" />
@@ -33,7 +46,7 @@
                 </div>
             </main>
         </div>
-
+        
         <!-- axios -->
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
         <!-- js -->

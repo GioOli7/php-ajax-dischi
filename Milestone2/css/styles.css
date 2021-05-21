@@ -23,6 +23,11 @@ main {
   background-color: #182d3d;
 }
 
+main .select {
+  text-align: center;
+  padding-top: 15px;
+}
+
 .album_list {
   display: -webkit-box;
   display: -ms-flexbox;
